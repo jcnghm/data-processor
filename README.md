@@ -14,7 +14,7 @@ A command-line tool written in Rust that converts CSV files to JSON format.
 Requires Rust 1.70 or higher.
 
 ```bash
-git clone <repository-url>
+git clone ...
 cd csv_to_json
 cargo build --release
 ```
