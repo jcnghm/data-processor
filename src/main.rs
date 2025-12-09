@@ -3,6 +3,7 @@ use serde_json::{Map, Value};
 use std::error::Error;
 
 fn main() -> Result<(), Box<dyn Error>> {
+    // TODO make this readable from the command line instead of hardcoded filename
     let mut reader = csv::Reader::from_path("nested-test.csv")?;
     let headers = reader.headers()?.clone();
 
