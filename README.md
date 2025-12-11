@@ -22,7 +22,7 @@ cargo build --release
 ## Usage
 
 ```bash
-cargo run -- --input data.csv
+cargo run -- path-to-file
 ```
 
 ## Examples
