@@ -1,12 +1,14 @@
 use csv_to_json::insert_value;
 use serde_json::{Map, Value};
 use std::error::Error;
+use std::env;
 
 fn main() -> Result<(), Box<dyn Error>> {
-    // TODO make this readable from the command line instead of hardcoded filename
-    let mut reader = csv::Reader::from_path("nested-test.csv")?;
+    // Get command line args
+    let args: Vec<String> = env::args().collect();
+    println!("ARGS: {:?}", args);
+    let mut reader = csv::Reader::from_path(args[1].clone())?;
     let headers = reader.headers()?.clone();
-
     let mut records = Vec::new();
 
     // print headers
